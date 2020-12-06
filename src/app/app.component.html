@@ -1,0 +1,28 @@
+<hello name="{{ name }}"></hello>
+<p>
+	Start editing to see some magic happen :)
+</p>
+<b>Using Html Binding</b>
+<hr>
+<div [innerHtml]="withBreaksHtml"></div>
+
+<b>Using White space pre wrap</b>
+<hr>
+<div class="white-space-pre">{{withBreaks}}</div>
+
+<div class="mt-30px">
+	<b class="title">Using New Line Pipe</b>
+	<hr>
+	<mat-accordion>
+		<mat-expansion-panel *ngFor="let item of items">
+			<mat-expansion-panel-header [ngStyle]="{'background-color':item.bgColor}">
+				<mat-panel-title>
+					{{item.title}}
+				</mat-panel-title>
+			</mat-expansion-panel-header>
+			<div [id]="item.id" #templateElementDiv>
+				{{item.description}}
+			</div>
+		</mat-expansion-panel>
+	</mat-accordion>
+</div>

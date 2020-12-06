@@ -1,0 +1,12 @@
+p {
+  font-family: Lato;
+}
+.white-space-pre {
+  white-space: pre-wrap;
+}
+.mt-30px {
+  margin-top: 30px;
+}
+.title {
+  margin: 10px 0;
+}
