@@ -1,6 +1,6 @@
 import { Component, ElementRef, VERSION } from "@angular/core";
 import { AfterViewInit, OnInit, QueryList, ViewChildren } from "@angular/core";
-import { NewLinePipe } from "./pipes/new-line";
+import { NewLineUtil } from "./pipes/new-line";
 
 @Component({
   selector: "my-app",
@@ -50,7 +50,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.items.forEach(accordionPanel => {
       this.templateElementDiv.forEach(templateChildElement => {
         if (accordionPanel.id === +templateChildElement.nativeElement.id) {
-          NewLinePipe.transform(
+          NewLineUtil.transform(
             templateChildElement,
             accordionPanel.description
           );
